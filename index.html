@@ -4,139 +4,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Servicii IT & Programare personalizate - PHP, Laravel, WordPress, Shopify - soluții moderne pentru afacerea ta digitală!">
-  <meta property="og:image" content="https://github.com/TheTechology/serviciiit/blob/main/Dezvoltare%20Software%20Personalizata%CC%86%20pentru%20Performant%CC%A6a%CC%86%20Maxima%CC%86.png">
   <title>Servicii IT & Programare | TheTechologyHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --primary: #1e3a8a;
       --secondary: #2563eb;
-      --accent: #60a5fa;
-      --bg: #f9fafb;
+      --accent: #3b82f6;
+      --bg: #f3f4f6;
       --text: #1f2937;
       --white: #ffffff;
     }
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
     }
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--white);
+      padding: 4rem 1rem;
       text-align: center;
-      padding: 3rem 1rem;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin: 0;
     }
-    .services, .pricing, .about, .terms {
-      padding: 3rem 1rem;
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    section {
+      padding: 4rem 1.5rem;
       max-width: 1200px;
       margin: auto;
     }
-    .services-grid {
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: var(--primary);
+    }
+    .services-grid, .pricing-container {
       display: grid;
+      gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
     }
-    .service-box {
+    .service-box, .pricing-box {
       background: var(--white);
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      text-align: left;
+      transition: all 0.3s ease;
     }
-    .service-box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    .service-box:hover, .pricing-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
     }
-    .service-icon {
-      font-size: 4rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .service-box h3 {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-    .service-buttons button, .pricing-box button {
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      padding: 0.9rem 1.8rem;
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(30, 58, 138, 0.3);
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .service-buttons button:hover, .pricing-box button:hover {
-      background: var(--secondary);
-      transform: scale(1.05);
-    }
-    .pricing-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .pricing-box {
-      background: var(--white);
-      border-radius: 24px;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      text-align: center;
-      flex: 1 1 280px;
-      max-width: 350px;
-      transition: transform 0.3s;
-    }
-    .pricing-box:hover {
-      transform: translateY(-8px);
-    }
-    .pricing-box h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .icon {
+    .service-icon, .icon {
       font-size: 3rem;
       color: var(--accent);
       margin-bottom: 1rem;
-      animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
+    .service-box h3, .pricing-box h3 {
+      font-size: 1.4rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .pricing-box p strong {
+      font-size: 1.6rem;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .service-buttons button, .pricing-box button, .about button {
+      background: var(--primary);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 14px;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+    .service-buttons button:hover, .pricing-box button:hover, .about button:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+    .about {
+      text-align: center;
+    }
+    .terms {
+      text-align: right;
     }
     footer {
       background: var(--primary);
       color: var(--white);
       text-align: center;
       padding: 2rem 1rem;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
+      margin-top: 3rem;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
     }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .pricing-container {
-        flex-direction: column;
-        align-items: center;
-      }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: var(--white);
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .social-buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .btn-facebook {
+      background-color: #3b5998;
+      color: #fff;
+    }
+    .btn-facebook:hover {
+      background-color: #2d4373;
+    }
+    .btn-linkedin {
+      background-color: #0077b5;
+      color: #fff;
+    }
+    .btn-linkedin:hover {
+      background-color: #005582;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Servicii de Programare & IT</h1>
-    <p>Dezvoltare software personalizată pentru performanță maximă</p>
+    <p>Experiență digitală modernă, construită pentru performanță</p>
   </header>
 
   <section class="services">
@@ -176,22 +216,22 @@
         <div class="icon">💻</div>
         <h3>Starter</h3>
         <p>Ideal pentru proiecte simple și website-uri de prezentare.</p>
-        <p><strong>Tarif:</strong> 25€/oră</p>
-        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+        <p><strong>25€/oră</strong></p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com'">Solicită oferta ACUM</button>
       </div>
       <div class="pricing-box">
         <div class="icon">🚀</div>
         <h3>Profesional</h3>
         <p>Funcționalități avansate, suport continuu, design adaptat.</p>
-        <p><strong>Tarif:</strong> 40€/oră</p>
-        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+        <p><strong>40€/oră</strong></p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com'">Solicită oferta ACUM</button>
       </div>
       <div class="pricing-box">
         <div class="icon">🏆</div>
         <h3>Enterprise</h3>
         <p>Proiecte complexe, aplicații web scalabile, integrare API.</p>
-        <p><strong>Tarif:</strong> 55€/oră</p>
-        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+        <p><strong>55€/oră</strong></p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com'">Solicită oferta ACUM</button>
       </div>
     </div>
   </section>
@@ -202,20 +242,38 @@
       <div class="pricing-box">
         <div class="icon">🔧</div>
         <h3>Mentenanță & Suport</h3>
-        <p>Serviciile de mentenanță includ actualizări periodice, backup-uri automate, optimizare performanță, monitorizare securitate și asistență tehnică continuă. <strong>Tariful pornește de la 150€/oră</strong> și se ajustează în funcție de nivelul de complexitate, tipul platformei și urgența solicitărilor.</p>
-        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+        <p>Actualizări, backup, monitorizare securitate, optimizare și suport personalizat.</p>
+        <p><strong>de la 150€/oră</strong></p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com'">Solicită oferta ACUM</button>
       </div>
     </div>
   </section>
 
   <section class="about">
     <h2>Despre mine</h2>
-    <p>Sunt Marian Dumitru, dezvoltator pasionat cu experiență în PHP, Laravel, WordPress, Shopify, UI/UX modern și responsive design. Am colaborat cu ONG-uri, startup-uri și clienți individuali, creând platforme performante, scalabile și intuitive. Cred în soluții simple care rezolvă probleme reale și aduc plus valoare afacerii tale.</p>
+    <p>Sunt Marian Dumitru, dezvoltator cu pasiune pentru UX/UI și soluții performante.</p>
+    <button onclick="document.getElementById('modal').style.display='block'">Află mai multe</button>
   </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+      <h2>Despre Marian Dumitru</h2>
+      <p>Cu peste 10 ani de experiență în dezvoltare software, Marian Dumitru a colaborat cu startup-uri, ONG-uri și companii internaționale, oferind soluții moderne bazate pe PHP, Laravel, WordPress și Shopify. Este pasionat de UX/UI și inovație digitală. Obiectivul său este crearea de aplicații și site-uri funcționale, rapide și intuitive care adaugă valoare reală afacerilor clienților.</p>
+      <div class="social-buttons">
+        <a class="btn-facebook" href="https://www.facebook.com/romaniauxui" target="_blank">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a class="btn-linkedin" href="https://www.linkedin.com/in/mariandumitruro/" target="_blank">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
 
   <section class="terms">
     <h2>Termeni & Condiții</h2>
-    <p>Oferta de preț este valabilă până la data de <strong>30 aprilie 2025</strong>. Timpul de execuție variază în funcție de complexitate. Plata se face pe oră lucrată, cu facturare la final de etapă. Mentenanța se poate ajusta în funcție de necesitățile clientului.</p>
+    <p>Oferta este valabilă până la 30 aprilie 2025. Plata se face pe oră lucrată. Mentenanța și dezvoltarea se ajustează în funcție de nevoile clientului.</p>
   </section>
 
   <footer>
