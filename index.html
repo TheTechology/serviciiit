@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicii IT & Programare personalizate - PHP, Laravel, WordPress, Shopify - soluții moderne pentru afacerea ta digitală!">
+  <meta property="og:image" content="https://github.com/TheTechology/serviciiit/blob/main/Dezvoltare%20Software%20Personalizata%CC%86%20pentru%20Performant%CC%A6a%CC%86%20Maxima%CC%86.png">
+  <title>Servicii IT & Programare | TheTechologyHub</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #60a5fa;
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --white: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .services, .pricing, .about, .terms {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .service-box {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+    .service-icon {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .service-box h3 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    .service-buttons button, .pricing-box button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem 1.8rem;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(30, 58, 138, 0.3);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .service-buttons button:hover, .pricing-box button:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .pricing-box {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      flex: 1 1 280px;
+      max-width: 350px;
+      transition: transform 0.3s;
+    }
+    .pricing-box:hover {
+      transform: translateY(-8px);
+    }
+    .pricing-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .icon {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servicii de Programare & IT</h1>
+    <p>Dezvoltare software personalizată pentru performanță maximă</p>
+  </header>
+
+  <section class="services">
+    <h2>Tipuri de servicii oferite</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <div class="service-icon">🧩</div>
+        <h3>Dezvoltare PHP / Laravel</h3>
+        <p>Aplicații web performante, sigure și personalizabile, ideale pentru soluții complexe, cu backend robust și scalabil.</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://servicii-php-laravel.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">🛒</div>
+        <h3>Shopify Web Design</h3>
+        <p>Magazine online moderne, optimizate pentru vânzări, cu design atractiv, ușor de administrat și rapid de lansat.</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://ofertawebisteshopify.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">🖥️</div>
+        <h3>Website WordPress</h3>
+        <p>Site-uri de prezentare, bloguri și platforme corporate dezvoltate pe WordPress, cu design responsive și funcționalități moderne.</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://ofertawebsitewordpress.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Pachete de preț</h2>
+    <div class="pricing-container">
+      <div class="pricing-box">
+        <div class="icon">💻</div>
+        <h3>Starter</h3>
+        <p>Ideal pentru proiecte simple și website-uri de prezentare.</p>
+        <p><strong>Tarif:</strong> 25€/oră</p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+      </div>
+      <div class="pricing-box">
+        <div class="icon">🚀</div>
+        <h3>Profesional</h3>
+        <p>Funcționalități avansate, suport continuu, design adaptat.</p>
+        <p><strong>Tarif:</strong> 40€/oră</p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+      </div>
+      <div class="pricing-box">
+        <div class="icon">🏆</div>
+        <h3>Enterprise</h3>
+        <p>Proiecte complexe, aplicații web scalabile, integrare API.</p>
+        <p><strong>Tarif:</strong> 55€/oră</p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Pachet Mentenanță Lunară</h2>
+    <div class="pricing-container">
+      <div class="pricing-box">
+        <div class="icon">🔧</div>
+        <h3>Mentenanță & Suport</h3>
+        <p>Serviciile de mentenanță includ actualizări periodice, backup-uri automate, optimizare performanță, monitorizare securitate și asistență tehnică continuă. <strong>Tariful pornește de la 150€/oră</strong> și se ajustează în funcție de nivelul de complexitate, tipul platformei și urgența solicitărilor.</p>
+        <button onclick="location.href='mailto:thetechologyhub@gmail.com?subject=Doresc mai multe informații legat de serviciile de programare in PHP/Laravel'">Solicită oferta ACUM</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Despre mine</h2>
+    <p>Sunt Marian Dumitru, dezvoltator pasionat cu experiență în PHP, Laravel, WordPress, Shopify, UI/UX modern și responsive design. Am colaborat cu ONG-uri, startup-uri și clienți individuali, creând platforme performante, scalabile și intuitive. Cred în soluții simple care rezolvă probleme reale și aduc plus valoare afacerii tale.</p>
+  </section>
+
+  <section class="terms">
+    <h2>Termeni & Condiții</h2>
+    <p>Oferta de preț este valabilă până la data de <strong>30 aprilie 2025</strong>. Timpul de execuție variază în funcție de complexitate. Plata se face pe oră lucrată, cu facturare la final de etapă. Mentenanța se poate ajusta în funcție de necesitățile clientului.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TheTechologyHub. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html>
