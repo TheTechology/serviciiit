@@ -1,30 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soluții IT Profesionale</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.body.innerHTML = "<body><header><button class=\\\"dark-toggle\\\" onclick=\\\"toggleDarkMode()\\\" style=\\\"position: absolute; top: 1rem; right: 1rem; background: var(--white); color: var(--primary); border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem;\\\"><i class=\\\"fas fa-moon\\\"></i></button><h1>Soluții IT Personalizate & Suport</h1><p>Soluții rapide și sigure, construite pe tehnologii de top</p></header><!-- RESTUL PAGINII AICI --></body>";
-    });
+  <title>Dezvoltare Software Personalizată | Soluții IT Profesionale pentru Performanță Maximizată</title>
+  <meta name="description" content="Descoperă servicii IT de top: aplicații PHP/Laravel, web design Shopify & WordPress. Performanță, viteză și inovație pentru afacerea ta digitală.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/TheTechology/serviciiit/main/Dezvoltare%20Software%20Personalizata%CC%86%20pentru%20Performant%CC%A6a%CC%86%20Maxima%CC%86.png">
+  <meta property="og:image:alt" content="Servicii dezvoltare software personalizată pentru performanță maximă">
+  <meta property="og:title" content="Dezvoltare Software Personalizată | TheTechologyHub">
+  <meta property="og:description" content="Soluții digitale moderne: programare PHP/Laravel, WordPress, Shopify. Creăm aplicații eficiente pentru afacerea ta.">
 
-    // Dezactivează combinații de taste pentru a preveni accesul la sursă
-    document.onkeydown = function (e) {
-      if (
-        e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && e.key === "I") ||
-        (e.ctrlKey && e.key === "U")
-      ) {
-        e.preventDefault();
-        return false;
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #3b82f6;
+      --bg: #f3f4f6;
+      --text: #1f2937;
+      --white: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    body.dark-mode {
+      --bg: #121212;
+      --text: #ffffff;
+      --white: #1e1e1e;
+      --primary: #3b82f6;
+      --secondary: #60a5fa;
+      --accent: #93c5fd;
+    }
+    .dark-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--white);
+      color: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+    }
+    .dark-toggle:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    @media (max-width: 768px) {
+      .dark-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
       }
-    };
-
-    // Blochează click dreapta
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
-  </script>
+    }
+  </style>
 </head>
 <body>
+  <header style="position: relative;">
+    <button class="dark-toggle" onclick="toggleDarkMode()">
+      <i class="fas fa-moon"></i>
+    </button>
+    <h1>Servicii de Programare & IT</h1>
+    <p>Experiență digitală modernă, construită pentru performanță</p>
+  </header>
+
+  <section class="services">
+    <h2>Tipuri de servicii oferite</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <div class="service-icon">🧩</div>
+        <h3>Dezvoltare PHP / Laravel</h3>
+        <p>Aplicații web performante, sigure și personalizabile...</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://servicii-php-laravel.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">🛒</div>
+        <h3>Shopify Web Design</h3>
+        <p>Magazine online moderne, optimizate pentru vânzări...</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://ofertawebisteshopify.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">🖥️</div>
+        <h3>Website WordPress</h3>
+        <p>Site-uri de prezentare, bloguri și platforme corporate...</p>
+        <div class="service-buttons">
+          <button onclick="location.href='https://ofertawebsitewordpress.netlify.app/'">Vezi detalii</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TheTechologyHub. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.querySelector('.dark-toggle i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  </script>
 </body>
 </html>
